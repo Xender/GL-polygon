@@ -36,8 +36,6 @@
 			<Add library="glfw" />
 			<Add library="GL" />
 		</Linker>
-		<Unit filename="gl_3_3_core.cpp" />
-		<Unit filename="gl_3_3_core.hpp" />
 		<Unit filename="init.cpp" />
 		<Unit filename="init.h" />
 		<Unit filename="main.cpp" />

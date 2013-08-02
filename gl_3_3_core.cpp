@@ -1,3 +1,6 @@
+// Generated with glLoadGen 1.9 - commandline:
+// lua LoadGen.lua 3_3_core -style=func_cpp -spec=gl -version=3.3 -profile=core
+
 #include <algorithm>
 #include <vector>
 #include <string.h>
@@ -63,9 +66,9 @@ static int TestPointer(const PROC pTest)
 	ptrdiff_t iTest;
 	if(!pTest) return 0;
 	iTest = (ptrdiff_t)pTest;
-	
+
 	if(iTest == 1 || iTest == 2 || iTest == 3 || iTest == -1) return 0;
-	
+
 	return 1;
 }
 
@@ -80,7 +83,7 @@ static PROC WinGetProcAddress(const char *name)
 	glMod = GetModuleHandleA("OpenGL32.dll");
 	return (PROC)GetProcAddress(glMod, (LPCSTR)name);
 }
-	
+
 #define IntGetProcAddress(name) WinGetProcAddress(name)
 #else
 	#if defined(__APPLE__)
@@ -101,7 +104,7 @@ namespace gl
 	namespace exts
 	{
 	} //namespace exts
-	
+
 	namespace _detail
 	{
 		typedef void (CODEGEN_FUNCPTR *PFNBLENDFUNC)(GLenum, GLenum);
@@ -200,7 +203,7 @@ namespace gl
 		PFNTEXPARAMETERIV TexParameteriv = 0;
 		typedef void (CODEGEN_FUNCPTR *PFNVIEWPORT)(GLint, GLint, GLsizei, GLsizei);
 		PFNVIEWPORT Viewport = 0;
-		
+
 		typedef void (CODEGEN_FUNCPTR *PFNBINDTEXTURE)(GLenum, GLuint);
 		PFNBINDTEXTURE BindTexture = 0;
 		typedef void (CODEGEN_FUNCPTR *PFNCOPYTEXIMAGE1D)(GLenum, GLint, GLenum, GLint, GLint, GLsizei, GLint);
@@ -227,7 +230,7 @@ namespace gl
 		PFNTEXSUBIMAGE1D TexSubImage1D = 0;
 		typedef void (CODEGEN_FUNCPTR *PFNTEXSUBIMAGE2D)(GLenum, GLint, GLint, GLint, GLsizei, GLsizei, GLenum, GLenum, const GLvoid *);
 		PFNTEXSUBIMAGE2D TexSubImage2D = 0;
-		
+
 		typedef void (CODEGEN_FUNCPTR *PFNBLENDCOLOR)(GLfloat, GLfloat, GLfloat, GLfloat);
 		PFNBLENDCOLOR BlendColor = 0;
 		typedef void (CODEGEN_FUNCPTR *PFNBLENDEQUATION)(GLenum);
@@ -240,7 +243,7 @@ namespace gl
 		PFNTEXIMAGE3D TexImage3D = 0;
 		typedef void (CODEGEN_FUNCPTR *PFNTEXSUBIMAGE3D)(GLenum, GLint, GLint, GLint, GLint, GLsizei, GLsizei, GLsizei, GLenum, GLenum, const GLvoid *);
 		PFNTEXSUBIMAGE3D TexSubImage3D = 0;
-		
+
 		typedef void (CODEGEN_FUNCPTR *PFNACTIVETEXTURE)(GLenum);
 		PFNACTIVETEXTURE ActiveTexture = 0;
 		typedef void (CODEGEN_FUNCPTR *PFNCOMPRESSEDTEXIMAGE1D)(GLenum, GLint, GLenum, GLsizei, GLint, GLsizei, const GLvoid *);
@@ -259,7 +262,7 @@ namespace gl
 		PFNGETCOMPRESSEDTEXIMAGE GetCompressedTexImage = 0;
 		typedef void (CODEGEN_FUNCPTR *PFNSAMPLECOVERAGE)(GLfloat, GLboolean);
 		PFNSAMPLECOVERAGE SampleCoverage = 0;
-		
+
 		typedef void (CODEGEN_FUNCPTR *PFNBLENDFUNCSEPARATE)(GLenum, GLenum, GLenum, GLenum);
 		PFNBLENDFUNCSEPARATE BlendFuncSeparate = 0;
 		typedef void (CODEGEN_FUNCPTR *PFNMULTIDRAWARRAYS)(GLenum, const GLint *, const GLsizei *, GLsizei);
@@ -274,7 +277,7 @@ namespace gl
 		PFNPOINTPARAMETERI PointParameteri = 0;
 		typedef void (CODEGEN_FUNCPTR *PFNPOINTPARAMETERIV)(GLenum, const GLint *);
 		PFNPOINTPARAMETERIV PointParameteriv = 0;
-		
+
 		typedef void (CODEGEN_FUNCPTR *PFNBEGINQUERY)(GLenum, GLuint);
 		PFNBEGINQUERY BeginQuery = 0;
 		typedef void (CODEGEN_FUNCPTR *PFNBINDBUFFER)(GLenum, GLuint);
@@ -313,7 +316,7 @@ namespace gl
 		PFNMAPBUFFER MapBuffer = 0;
 		typedef GLboolean (CODEGEN_FUNCPTR *PFNUNMAPBUFFER)(GLenum);
 		PFNUNMAPBUFFER UnmapBuffer = 0;
-		
+
 		typedef void (CODEGEN_FUNCPTR *PFNATTACHSHADER)(GLuint, GLuint);
 		PFNATTACHSHADER AttachShader = 0;
 		typedef void (CODEGEN_FUNCPTR *PFNBINDATTRIBLOCATION)(GLuint, GLuint, const GLchar *);
@@ -500,7 +503,7 @@ namespace gl
 		PFNVERTEXATTRIB4USV VertexAttrib4usv = 0;
 		typedef void (CODEGEN_FUNCPTR *PFNVERTEXATTRIBPOINTER)(GLuint, GLint, GLenum, GLboolean, GLsizei, const GLvoid *);
 		PFNVERTEXATTRIBPOINTER VertexAttribPointer = 0;
-		
+
 		typedef void (CODEGEN_FUNCPTR *PFNUNIFORMMATRIX2X3FV)(GLint, GLsizei, GLboolean, const GLfloat *);
 		PFNUNIFORMMATRIX2X3FV UniformMatrix2x3fv = 0;
 		typedef void (CODEGEN_FUNCPTR *PFNUNIFORMMATRIX2X4FV)(GLint, GLsizei, GLboolean, const GLfloat *);
@@ -513,7 +516,7 @@ namespace gl
 		PFNUNIFORMMATRIX4X2FV UniformMatrix4x2fv = 0;
 		typedef void (CODEGEN_FUNCPTR *PFNUNIFORMMATRIX4X3FV)(GLint, GLsizei, GLboolean, const GLfloat *);
 		PFNUNIFORMMATRIX4X3FV UniformMatrix4x3fv = 0;
-		
+
 		typedef void (CODEGEN_FUNCPTR *PFNBEGINCONDITIONALRENDER)(GLuint, GLenum);
 		PFNBEGINCONDITIONALRENDER BeginConditionalRender = 0;
 		typedef void (CODEGEN_FUNCPTR *PFNBEGINTRANSFORMFEEDBACK)(GLenum);
@@ -682,7 +685,7 @@ namespace gl
 		PFNVERTEXATTRIBI4USV VertexAttribI4usv = 0;
 		typedef void (CODEGEN_FUNCPTR *PFNVERTEXATTRIBIPOINTER)(GLuint, GLint, GLenum, GLsizei, const GLvoid *);
 		PFNVERTEXATTRIBIPOINTER VertexAttribIPointer = 0;
-		
+
 		typedef void (CODEGEN_FUNCPTR *PFNCOPYBUFFERSUBDATA)(GLenum, GLenum, GLintptr, GLintptr, GLsizeiptr);
 		PFNCOPYBUFFERSUBDATA CopyBufferSubData = 0;
 		typedef void (CODEGEN_FUNCPTR *PFNDRAWARRAYSINSTANCED)(GLenum, GLint, GLsizei, GLsizei);
@@ -707,7 +710,7 @@ namespace gl
 		PFNTEXBUFFER TexBuffer = 0;
 		typedef void (CODEGEN_FUNCPTR *PFNUNIFORMBLOCKBINDING)(GLuint, GLuint, GLuint);
 		PFNUNIFORMBLOCKBINDING UniformBlockBinding = 0;
-		
+
 		typedef GLenum (CODEGEN_FUNCPTR *PFNCLIENTWAITSYNC)(GLsync, GLbitfield, GLuint64);
 		PFNCLIENTWAITSYNC ClientWaitSync = 0;
 		typedef void (CODEGEN_FUNCPTR *PFNDELETESYNC)(GLsync);
@@ -746,7 +749,7 @@ namespace gl
 		PFNTEXIMAGE3DMULTISAMPLE TexImage3DMultisample = 0;
 		typedef void (CODEGEN_FUNCPTR *PFNWAITSYNC)(GLsync, GLbitfield, GLuint64);
 		PFNWAITSYNC WaitSync = 0;
-		
+
 		typedef void (CODEGEN_FUNCPTR *PFNBINDFRAGDATALOCATIONINDEXED)(GLuint, GLuint, GLuint, const GLchar *);
 		PFNBINDFRAGDATALOCATIONINDEXED BindFragDataLocationIndexed = 0;
 		typedef void (CODEGEN_FUNCPTR *PFNBINDSAMPLER)(GLuint, GLuint);
@@ -863,7 +866,7 @@ namespace gl
 		PFNVERTEXP4UI VertexP4ui = 0;
 		typedef void (CODEGEN_FUNCPTR *PFNVERTEXP4UIV)(GLenum, const GLuint *);
 		PFNVERTEXP4UIV VertexP4uiv = 0;
-		
+
 		static int LoadCoreFunctions()
 		{
 			int numFailed = 0;
@@ -1617,12 +1620,12 @@ namespace gl
 			if(!VertexP4uiv) ++numFailed;
 			return numFailed;
 		}
-		
+
 	} //namespace _detail
-	
+
 	namespace sys
 	{
-		namespace 
+		namespace
 		{
 			typedef int (*PFN_LOADEXTENSION)();
 			struct MapEntry
@@ -1632,38 +1635,38 @@ namespace gl
 					, extVariable(_extVariable)
 					, loaderFunc(0)
 					{}
-					
+
 				MapEntry(const char *_extName, exts::LoadTest *_extVariable, PFN_LOADEXTENSION _loaderFunc)
 					: extName(_extName)
 					, extVariable(_extVariable)
 					, loaderFunc(_loaderFunc)
 					{}
-				
+
 				const char *extName;
 				exts::LoadTest *extVariable;
 				PFN_LOADEXTENSION loaderFunc;
 			};
-			
+
 			struct MapCompare
 			{
 				MapCompare(const char *test_) : test(test_) {}
 				bool operator()(const MapEntry &other) { return strcmp(test, other.extName) == 0; }
 				const char *test;
 			};
-			
+
 			void InitializeMappingTable(std::vector<MapEntry> &table)
 			{
 				table.reserve(0);
 			}
-			
+
 			void ClearExtensionVars()
 			{
 			}
-			
+
 			void LoadExtByName(std::vector<MapEntry> &table, const char *extensionName)
 			{
 				std::vector<MapEntry>::iterator entry = std::find_if(table.begin(), table.end(), MapCompare(extensionName));
-				
+
 				if(entry != table.end())
 				{
 					if(entry->loaderFunc)
@@ -1672,76 +1675,76 @@ namespace gl
 						(*entry->extVariable) = exts::LoadTest(true, 0);
 				}
 			}
-		} //namespace 
-		
-		
-		namespace 
+		} //namespace
+
+
+		namespace
 		{
 			static void ProcExtsFromExtList(std::vector<MapEntry> &table)
 			{
 				GLint iLoop;
 				GLint iNumExtensions = 0;
 				gl::_detail::GetIntegerv(gl::NUM_EXTENSIONS, &iNumExtensions);
-			
+
 				for(iLoop = 0; iLoop < iNumExtensions; iLoop++)
 				{
 					const char *strExtensionName = (const char *)gl::_detail::GetStringi(gl::EXTENSIONS, iLoop);
 					LoadExtByName(table, strExtensionName);
 				}
 			}
-			
-		} //namespace 
-		
+
+		} //namespace
+
 		exts::LoadTest LoadFunctions()
 		{
 			ClearExtensionVars();
 			std::vector<MapEntry> table;
 			InitializeMappingTable(table);
-			
+
 			_detail::GetIntegerv = reinterpret_cast<_detail::PFNGETINTEGERV>(IntGetProcAddress("glGetIntegerv"));
 			if(!_detail::GetIntegerv) return exts::LoadTest();
 			_detail::GetStringi = reinterpret_cast<_detail::PFNGETSTRINGI>(IntGetProcAddress("glGetStringi"));
 			if(!_detail::GetStringi) return exts::LoadTest();
-			
+
 			ProcExtsFromExtList(table);
-			
+
 			int numFailed = _detail::LoadCoreFunctions();
 			return exts::LoadTest(true, numFailed);
 		}
-		
+
 		static int g_major_version = 0;
 		static int g_minor_version = 0;
-		
+
 		static void GetGLVersion()
 		{
 			_detail::GetIntegerv(MAJOR_VERSION, &g_major_version);
 			_detail::GetIntegerv(MINOR_VERSION, &g_minor_version);
 		}
-		
+
 		int GetMajorVersion()
 		{
 			if(g_major_version == 0)
 				GetGLVersion();
 			return g_major_version;
 		}
-		
+
 		int GetMinorVersion()
 		{
 			if(g_major_version == 0) //Yes, check the major version to get the minor one.
 				GetGLVersion();
 			return g_minor_version;
 		}
-		
+
 		bool IsVersionGEQ(int majorVersion, int minorVersion)
 		{
 			if(g_major_version == 0)
 				GetGLVersion();
-				
+
 			if(majorVersion > g_major_version) return true;
 			if(majorVersion < g_major_version) return false;
 			if(minorVersion >= g_minor_version) return true;
 			return false;
 		}
-		
+
 	} //namespace sys
 } //namespace gl

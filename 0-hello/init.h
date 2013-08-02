@@ -1,7 +1,7 @@
 #ifndef INIT_H
 #define INIT_H
 
-#include "gl_3_3_core.hpp"
+#include "../gl_3_3_core.hpp"
 #include <GLFW/glfw3.h>
 
 #include <memory>

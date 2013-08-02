@@ -1,3 +1,6 @@
+// Generated with glLoadGen 1.9 - commandline:
+// lua LoadGen.lua 3_3_core -style=func_cpp -spec=gl -version=3.3 -profile=core
+
 #ifndef FUNCTION_CPP_GENERATED_HEADEROPENGL_HPP
 #define FUNCTION_CPP_GENERATED_HEADEROPENGL_HPP
 
@@ -158,22 +161,22 @@ namespace gl
 			//Safe bool idiom. Joy!
 			typedef void (LoadTest::*bool_type)() const;
 			void big_long_name_that_really_doesnt_matter() const {}
-			
+
 		public:
 			operator bool_type() const
 			{
 				return m_isLoaded ? &LoadTest::big_long_name_that_really_doesnt_matter : 0;
 			}
-			
+
 			int GetNumMissing() const {return m_numMissing;}
-			
+
 			LoadTest() : m_isLoaded(false), m_numMissing(0) {}
 			LoadTest(bool isLoaded, int numMissing) : m_isLoaded(isLoaded), m_numMissing(numMissing) {}
 		private:
 			bool m_isLoaded;
 			int m_numMissing;
 		};
-		
+
 	} //namespace exts
 	enum
 	{
@@ -378,7 +381,7 @@ namespace gl
 		VIEWPORT                         = 0x0BA2,
 		XOR                              = 0x1506,
 		ZERO                             = 0,
-		
+
 		ALIASED_LINE_WIDTH_RANGE         = 0x846E,
 		BGR                              = 0x80E0,
 		BGRA                             = 0x80E1,
@@ -415,7 +418,7 @@ namespace gl
 		UNSIGNED_SHORT_5_5_5_1           = 0x8034,
 		UNSIGNED_SHORT_5_6_5             = 0x8363,
 		UNSIGNED_SHORT_5_6_5_REV         = 0x8364,
-		
+
 		ACTIVE_TEXTURE                   = 0x84E0,
 		CLAMP_TO_BORDER                  = 0x812D,
 		COMPRESSED_RGB                   = 0x84ED,
@@ -475,7 +478,7 @@ namespace gl
 		TEXTURE_CUBE_MAP_POSITIVE_X      = 0x8515,
 		TEXTURE_CUBE_MAP_POSITIVE_Y      = 0x8517,
 		TEXTURE_CUBE_MAP_POSITIVE_Z      = 0x8519,
-		
+
 		BLEND_DST_ALPHA                  = 0x80CA,
 		BLEND_DST_RGB                    = 0x80C8,
 		BLEND_SRC_ALPHA                  = 0x80CB,
@@ -492,7 +495,7 @@ namespace gl
 		TEXTURE_COMPARE_MODE             = 0x884C,
 		TEXTURE_DEPTH_SIZE               = 0x884A,
 		TEXTURE_LOD_BIAS                 = 0x8501,
-		
+
 		ARRAY_BUFFER                     = 0x8892,
 		ARRAY_BUFFER_BINDING             = 0x8894,
 		BUFFER_ACCESS                    = 0x88BB,
@@ -521,7 +524,7 @@ namespace gl
 		STREAM_READ                      = 0x88E1,
 		VERTEX_ATTRIB_ARRAY_BUFFER_BINDING = 0x889F,
 		WRITE_ONLY                       = 0x88B9,
-		
+
 		ACTIVE_ATTRIBUTES                = 0x8B89,
 		ACTIVE_ATTRIBUTE_MAX_LENGTH      = 0x8B8A,
 		ACTIVE_UNIFORMS                  = 0x8B86,
@@ -602,7 +605,7 @@ namespace gl
 		VERTEX_ATTRIB_ARRAY_TYPE         = 0x8625,
 		VERTEX_PROGRAM_POINT_SIZE        = 0x8642,
 		VERTEX_SHADER                    = 0x8B31,
-		
+
 		COMPRESSED_SRGB                  = 0x8C48,
 		COMPRESSED_SRGB_ALPHA            = 0x8C49,
 		FLOAT_MAT2x3                     = 0x8B65,
@@ -619,7 +622,7 @@ namespace gl
 		SRGB8                            = 0x8C41,
 		SRGB8_ALPHA8                     = 0x8C43,
 		SRGB_ALPHA                       = 0x8C42,
-		
+
 		BGRA_INTEGER                     = 0x8D9B,
 		BGR_INTEGER                      = 0x8D9A,
 		BLUE_INTEGER                     = 0x8D96,
@@ -836,7 +839,7 @@ namespace gl
 		UNSIGNED_NORMALIZED              = 0x8C17,
 		VERTEX_ARRAY_BINDING             = 0x85B5,
 		VERTEX_ATTRIB_ARRAY_INTEGER      = 0x88FD,
-		
+
 		ACTIVE_UNIFORM_BLOCKS            = 0x8A36,
 		ACTIVE_UNIFORM_BLOCK_MAX_NAME_LENGTH = 0x8A35,
 		COPY_READ_BUFFER                 = 0x8F36,
@@ -895,7 +898,7 @@ namespace gl
 		UNIFORM_TYPE                     = 0x8A37,
 		UNSIGNED_INT_SAMPLER_2D_RECT     = 0x8DD5,
 		UNSIGNED_INT_SAMPLER_BUFFER      = 0x8DD8,
-		
+
 		ALREADY_SIGNALED                 = 0x911A,
 		CONDITION_SATISFIED              = 0x911C,
 		CONTEXT_COMPATIBILITY_PROFILE_BIT = 0x00000002,
@@ -961,7 +964,7 @@ namespace gl
 		UNSIGNED_INT_SAMPLER_2D_MULTISAMPLE = 0x910A,
 		UNSIGNED_INT_SAMPLER_2D_MULTISAMPLE_ARRAY = 0x910D,
 		WAIT_FAILED_                     = 0x911D,
-		
+
 		ANY_SAMPLES_PASSED               = 0x8C2F,
 		INT_2_10_10_10_REV               = 0x8D9F,
 		MAX_DUAL_SOURCE_DRAW_BUFFERS     = 0x88FC,
@@ -978,9 +981,9 @@ namespace gl
 		TIMESTAMP                        = 0x8E28,
 		TIME_ELAPSED                     = 0x88BF,
 		VERTEX_ATTRIB_ARRAY_DIVISOR      = 0x88FE,
-		
+
 	};
-	
+
 	namespace _detail
 	{
 		extern void (CODEGEN_FUNCPTR *BlendFunc)(GLenum sfactor, GLenum dfactor);
@@ -1031,7 +1034,7 @@ namespace gl
 		extern void (CODEGEN_FUNCPTR *TexParameteri)(GLenum target, GLenum pname, GLint param);
 		extern void (CODEGEN_FUNCPTR *TexParameteriv)(GLenum target, GLenum pname, const GLint * params);
 		extern void (CODEGEN_FUNCPTR *Viewport)(GLint x, GLint y, GLsizei width, GLsizei height);
-		
+
 		extern void (CODEGEN_FUNCPTR *BindTexture)(GLenum target, GLuint texture);
 		extern void (CODEGEN_FUNCPTR *CopyTexImage1D)(GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLint border);
 		extern void (CODEGEN_FUNCPTR *CopyTexImage2D)(GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border);
@@ -1045,14 +1048,14 @@ namespace gl
 		extern void (CODEGEN_FUNCPTR *PolygonOffset)(GLfloat factor, GLfloat units);
 		extern void (CODEGEN_FUNCPTR *TexSubImage1D)(GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type, const GLvoid * pixels);
 		extern void (CODEGEN_FUNCPTR *TexSubImage2D)(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid * pixels);
-		
+
 		extern void (CODEGEN_FUNCPTR *BlendColor)(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha);
 		extern void (CODEGEN_FUNCPTR *BlendEquation)(GLenum mode);
 		extern void (CODEGEN_FUNCPTR *CopyTexSubImage3D)(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height);
 		extern void (CODEGEN_FUNCPTR *DrawRangeElements)(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid * indices);
 		extern void (CODEGEN_FUNCPTR *TexImage3D)(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid * pixels);
 		extern void (CODEGEN_FUNCPTR *TexSubImage3D)(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid * pixels);
-		
+
 		extern void (CODEGEN_FUNCPTR *ActiveTexture)(GLenum texture);
 		extern void (CODEGEN_FUNCPTR *CompressedTexImage1D)(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid * data);
 		extern void (CODEGEN_FUNCPTR *CompressedTexImage2D)(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const GLvoid * data);
@@ -1062,7 +1065,7 @@ namespace gl
 		extern void (CODEGEN_FUNCPTR *CompressedTexSubImage3D)(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const GLvoid * data);
 		extern void (CODEGEN_FUNCPTR *GetCompressedTexImage)(GLenum target, GLint level, GLvoid * img);
 		extern void (CODEGEN_FUNCPTR *SampleCoverage)(GLfloat value, GLboolean invert);
-		
+
 		extern void (CODEGEN_FUNCPTR *BlendFuncSeparate)(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha);
 		extern void (CODEGEN_FUNCPTR *MultiDrawArrays)(GLenum mode, const GLint * first, const GLsizei * count, GLsizei drawcount);
 		extern void (CODEGEN_FUNCPTR *MultiDrawElements)(GLenum mode, const GLsizei * count, GLenum type, const GLvoid *const* indices, GLsizei drawcount);
@@ -1070,7 +1073,7 @@ namespace gl
 		extern void (CODEGEN_FUNCPTR *PointParameterfv)(GLenum pname, const GLfloat * params);
 		extern void (CODEGEN_FUNCPTR *PointParameteri)(GLenum pname, GLint param);
 		extern void (CODEGEN_FUNCPTR *PointParameteriv)(GLenum pname, const GLint * params);
-		
+
 		extern void (CODEGEN_FUNCPTR *BeginQuery)(GLenum target, GLuint id);
 		extern void (CODEGEN_FUNCPTR *BindBuffer)(GLenum target, GLuint buffer);
 		extern void (CODEGEN_FUNCPTR *BufferData)(GLenum target, GLsizeiptr size, const GLvoid * data, GLenum usage);
@@ -1090,7 +1093,7 @@ namespace gl
 		extern GLboolean (CODEGEN_FUNCPTR *IsQuery)(GLuint id);
 		extern void * (CODEGEN_FUNCPTR *MapBuffer)(GLenum target, GLenum access);
 		extern GLboolean (CODEGEN_FUNCPTR *UnmapBuffer)(GLenum target);
-		
+
 		extern void (CODEGEN_FUNCPTR *AttachShader)(GLuint program, GLuint shader);
 		extern void (CODEGEN_FUNCPTR *BindAttribLocation)(GLuint program, GLuint index, const GLchar * name);
 		extern void (CODEGEN_FUNCPTR *BlendEquationSeparate)(GLenum modeRGB, GLenum modeAlpha);
@@ -1184,14 +1187,14 @@ namespace gl
 		extern void (CODEGEN_FUNCPTR *VertexAttrib4uiv)(GLuint index, const GLuint * v);
 		extern void (CODEGEN_FUNCPTR *VertexAttrib4usv)(GLuint index, const GLushort * v);
 		extern void (CODEGEN_FUNCPTR *VertexAttribPointer)(GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const GLvoid * pointer);
-		
+
 		extern void (CODEGEN_FUNCPTR *UniformMatrix2x3fv)(GLint location, GLsizei count, GLboolean transpose, const GLfloat * value);
 		extern void (CODEGEN_FUNCPTR *UniformMatrix2x4fv)(GLint location, GLsizei count, GLboolean transpose, const GLfloat * value);
 		extern void (CODEGEN_FUNCPTR *UniformMatrix3x2fv)(GLint location, GLsizei count, GLboolean transpose, const GLfloat * value);
 		extern void (CODEGEN_FUNCPTR *UniformMatrix3x4fv)(GLint location, GLsizei count, GLboolean transpose, const GLfloat * value);
 		extern void (CODEGEN_FUNCPTR *UniformMatrix4x2fv)(GLint location, GLsizei count, GLboolean transpose, const GLfloat * value);
 		extern void (CODEGEN_FUNCPTR *UniformMatrix4x3fv)(GLint location, GLsizei count, GLboolean transpose, const GLfloat * value);
-		
+
 		extern void (CODEGEN_FUNCPTR *BeginConditionalRender)(GLuint id, GLenum mode);
 		extern void (CODEGEN_FUNCPTR *BeginTransformFeedback)(GLenum primitiveMode);
 		extern void (CODEGEN_FUNCPTR *BindBufferBase)(GLenum target, GLuint index, GLuint buffer);
@@ -1276,7 +1279,7 @@ namespace gl
 		extern void (CODEGEN_FUNCPTR *VertexAttribI4uiv)(GLuint index, const GLuint * v);
 		extern void (CODEGEN_FUNCPTR *VertexAttribI4usv)(GLuint index, const GLushort * v);
 		extern void (CODEGEN_FUNCPTR *VertexAttribIPointer)(GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid * pointer);
-		
+
 		extern void (CODEGEN_FUNCPTR *CopyBufferSubData)(GLenum readTarget, GLenum writeTarget, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size);
 		extern void (CODEGEN_FUNCPTR *DrawArraysInstanced)(GLenum mode, GLint first, GLsizei count, GLsizei instancecount);
 		extern void (CODEGEN_FUNCPTR *DrawElementsInstanced)(GLenum mode, GLsizei count, GLenum type, const GLvoid * indices, GLsizei instancecount);
@@ -1289,7 +1292,7 @@ namespace gl
 		extern void (CODEGEN_FUNCPTR *PrimitiveRestartIndex)(GLuint index);
 		extern void (CODEGEN_FUNCPTR *TexBuffer)(GLenum target, GLenum internalformat, GLuint buffer);
 		extern void (CODEGEN_FUNCPTR *UniformBlockBinding)(GLuint program, GLuint uniformBlockIndex, GLuint uniformBlockBinding);
-		
+
 		extern GLenum (CODEGEN_FUNCPTR *ClientWaitSync)(GLsync sync, GLbitfield flags, GLuint64 timeout);
 		extern void (CODEGEN_FUNCPTR *DeleteSync)(GLsync sync);
 		extern void (CODEGEN_FUNCPTR *DrawElementsBaseVertex)(GLenum mode, GLsizei count, GLenum type, const GLvoid * indices, GLint basevertex);
@@ -1309,7 +1312,7 @@ namespace gl
 		extern void (CODEGEN_FUNCPTR *TexImage2DMultisample)(GLenum target, GLsizei samples, GLint internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations);
 		extern void (CODEGEN_FUNCPTR *TexImage3DMultisample)(GLenum target, GLsizei samples, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations);
 		extern void (CODEGEN_FUNCPTR *WaitSync)(GLsync sync, GLbitfield flags, GLuint64 timeout);
-		
+
 		extern void (CODEGEN_FUNCPTR *BindFragDataLocationIndexed)(GLuint program, GLuint colorNumber, GLuint index, const GLchar * name);
 		extern void (CODEGEN_FUNCPTR *BindSampler)(GLuint unit, GLuint sampler);
 		extern void (CODEGEN_FUNCPTR *ColorP3ui)(GLenum type, GLuint color);
@@ -1368,9 +1371,9 @@ namespace gl
 		extern void (CODEGEN_FUNCPTR *VertexP3uiv)(GLenum type, const GLuint * value);
 		extern void (CODEGEN_FUNCPTR *VertexP4ui)(GLenum type, GLuint value);
 		extern void (CODEGEN_FUNCPTR *VertexP4uiv)(GLenum type, const GLuint * value);
-		
+
 	} //namespace _detail
-	
+
 	inline void BlendFunc(GLenum sfactor, GLenum dfactor){_detail::BlendFunc(sfactor, dfactor);}
 	inline void Clear(GLbitfield mask){_detail::Clear(mask);}
 	inline void ClearColor(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha){_detail::ClearColor(red, green, blue, alpha);}
@@ -1419,7 +1422,7 @@ namespace gl
 	inline void TexParameteri(GLenum target, GLenum pname, GLint param){_detail::TexParameteri(target, pname, param);}
 	inline void TexParameteriv(GLenum target, GLenum pname, const GLint * params){_detail::TexParameteriv(target, pname, params);}
 	inline void Viewport(GLint x, GLint y, GLsizei width, GLsizei height){_detail::Viewport(x, y, width, height);}
-	
+
 	inline void BindTexture(GLenum target, GLuint texture){_detail::BindTexture(target, texture);}
 	inline void CopyTexImage1D(GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLint border){_detail::CopyTexImage1D(target, level, internalformat, x, y, width, border);}
 	inline void CopyTexImage2D(GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border){_detail::CopyTexImage2D(target, level, internalformat, x, y, width, height, border);}
@@ -1433,14 +1436,14 @@ namespace gl
 	inline void PolygonOffset(GLfloat factor, GLfloat units){_detail::PolygonOffset(factor, units);}
 	inline void TexSubImage1D(GLenum target, GLint level, GLint xoffset, GLsizei width, GLenum format, GLenum type, const GLvoid * pixels){_detail::TexSubImage1D(target, level, xoffset, width, format, type, pixels);}
 	inline void TexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid * pixels){_detail::TexSubImage2D(target, level, xoffset, yoffset, width, height, format, type, pixels);}
-	
+
 	inline void BlendColor(GLfloat red, GLfloat green, GLfloat blue, GLfloat alpha){_detail::BlendColor(red, green, blue, alpha);}
 	inline void BlendEquation(GLenum mode){_detail::BlendEquation(mode);}
 	inline void CopyTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height){_detail::CopyTexSubImage3D(target, level, xoffset, yoffset, zoffset, x, y, width, height);}
 	inline void DrawRangeElements(GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const GLvoid * indices){_detail::DrawRangeElements(mode, start, end, count, type, indices);}
 	inline void TexImage3D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLint border, GLenum format, GLenum type, const GLvoid * pixels){_detail::TexImage3D(target, level, internalformat, width, height, depth, border, format, type, pixels);}
 	inline void TexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const GLvoid * pixels){_detail::TexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels);}
-	
+
 	inline void ActiveTexture(GLenum texture){_detail::ActiveTexture(texture);}
 	inline void CompressedTexImage1D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLint border, GLsizei imageSize, const GLvoid * data){_detail::CompressedTexImage1D(target, level, internalformat, width, border, imageSize, data);}
 	inline void CompressedTexImage2D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const GLvoid * data){_detail::CompressedTexImage2D(target, level, internalformat, width, height, border, imageSize, data);}
@@ -1450,7 +1453,7 @@ namespace gl
 	inline void CompressedTexSubImage3D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLsizei imageSize, const GLvoid * data){_detail::CompressedTexSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, imageSize, data);}
 	inline void GetCompressedTexImage(GLenum target, GLint level, GLvoid * img){_detail::GetCompressedTexImage(target, level, img);}
 	inline void SampleCoverage(GLfloat value, GLboolean invert){_detail::SampleCoverage(value, invert);}
-	
+
 	inline void BlendFuncSeparate(GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha){_detail::BlendFuncSeparate(sfactorRGB, dfactorRGB, sfactorAlpha, dfactorAlpha);}
 	inline void MultiDrawArrays(GLenum mode, const GLint * first, const GLsizei * count, GLsizei drawcount){_detail::MultiDrawArrays(mode, first, count, drawcount);}
 	inline void MultiDrawElements(GLenum mode, const GLsizei * count, GLenum type, const GLvoid *const* indices, GLsizei drawcount){_detail::MultiDrawElements(mode, count, type, indices, drawcount);}
@@ -1458,7 +1461,7 @@ namespace gl
 	inline void PointParameterfv(GLenum pname, const GLfloat * params){_detail::PointParameterfv(pname, params);}
 	inline void PointParameteri(GLenum pname, GLint param){_detail::PointParameteri(pname, param);}
 	inline void PointParameteriv(GLenum pname, const GLint * params){_detail::PointParameteriv(pname, params);}
-	
+
 	inline void BeginQuery(GLenum target, GLuint id){_detail::BeginQuery(target, id);}
 	inline void BindBuffer(GLenum target, GLuint buffer){_detail::BindBuffer(target, buffer);}
 	inline void BufferData(GLenum target, GLsizeiptr size, const GLvoid * data, GLenum usage){_detail::BufferData(target, size, data, usage);}
@@ -1478,7 +1481,7 @@ namespace gl
 	inline GLboolean IsQuery(GLuint id){return _detail::IsQuery(id);}
 	inline void * MapBuffer(GLenum target, GLenum access){return _detail::MapBuffer(target, access);}
 	inline GLboolean UnmapBuffer(GLenum target){return _detail::UnmapBuffer(target);}
-	
+
 	inline void AttachShader(GLuint program, GLuint shader){_detail::AttachShader(program, shader);}
 	inline void BindAttribLocation(GLuint program, GLuint index, const GLchar * name){_detail::BindAttribLocation(program, index, name);}
 	inline void BlendEquationSeparate(GLenum modeRGB, GLenum modeAlpha){_detail::BlendEquationSeparate(modeRGB, modeAlpha);}
@@ -1572,14 +1575,14 @@ namespace gl
 	inline void VertexAttrib4uiv(GLuint index, const GLuint * v){_detail::VertexAttrib4uiv(index, v);}
 	inline void VertexAttrib4usv(GLuint index, const GLushort * v){_detail::VertexAttrib4usv(index, v);}
 	inline void VertexAttribPointer(GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const GLvoid * pointer){_detail::VertexAttribPointer(index, size, type, normalized, stride, pointer);}
-	
+
 	inline void UniformMatrix2x3fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat * value){_detail::UniformMatrix2x3fv(location, count, transpose, value);}
 	inline void UniformMatrix2x4fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat * value){_detail::UniformMatrix2x4fv(location, count, transpose, value);}
 	inline void UniformMatrix3x2fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat * value){_detail::UniformMatrix3x2fv(location, count, transpose, value);}
 	inline void UniformMatrix3x4fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat * value){_detail::UniformMatrix3x4fv(location, count, transpose, value);}
 	inline void UniformMatrix4x2fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat * value){_detail::UniformMatrix4x2fv(location, count, transpose, value);}
 	inline void UniformMatrix4x3fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat * value){_detail::UniformMatrix4x3fv(location, count, transpose, value);}
-	
+
 	inline void BeginConditionalRender(GLuint id, GLenum mode){_detail::BeginConditionalRender(id, mode);}
 	inline void BeginTransformFeedback(GLenum primitiveMode){_detail::BeginTransformFeedback(primitiveMode);}
 	inline void BindBufferBase(GLenum target, GLuint index, GLuint buffer){_detail::BindBufferBase(target, index, buffer);}
@@ -1664,7 +1667,7 @@ namespace gl
 	inline void VertexAttribI4uiv(GLuint index, const GLuint * v){_detail::VertexAttribI4uiv(index, v);}
 	inline void VertexAttribI4usv(GLuint index, const GLushort * v){_detail::VertexAttribI4usv(index, v);}
 	inline void VertexAttribIPointer(GLuint index, GLint size, GLenum type, GLsizei stride, const GLvoid * pointer){_detail::VertexAttribIPointer(index, size, type, stride, pointer);}
-	
+
 	inline void CopyBufferSubData(GLenum readTarget, GLenum writeTarget, GLintptr readOffset, GLintptr writeOffset, GLsizeiptr size){_detail::CopyBufferSubData(readTarget, writeTarget, readOffset, writeOffset, size);}
 	inline void DrawArraysInstanced(GLenum mode, GLint first, GLsizei count, GLsizei instancecount){_detail::DrawArraysInstanced(mode, first, count, instancecount);}
 	inline void DrawElementsInstanced(GLenum mode, GLsizei count, GLenum type, const GLvoid * indices, GLsizei instancecount){_detail::DrawElementsInstanced(mode, count, type, indices, instancecount);}
@@ -1677,7 +1680,7 @@ namespace gl
 	inline void PrimitiveRestartIndex(GLuint index){_detail::PrimitiveRestartIndex(index);}
 	inline void TexBuffer(GLenum target, GLenum internalformat, GLuint buffer){_detail::TexBuffer(target, internalformat, buffer);}
 	inline void UniformBlockBinding(GLuint program, GLuint uniformBlockIndex, GLuint uniformBlockBinding){_detail::UniformBlockBinding(program, uniformBlockIndex, uniformBlockBinding);}
-	
+
 	inline GLenum ClientWaitSync(GLsync sync, GLbitfield flags, GLuint64 timeout){return _detail::ClientWaitSync(sync, flags, timeout);}
 	inline void DeleteSync(GLsync sync){_detail::DeleteSync(sync);}
 	inline void DrawElementsBaseVertex(GLenum mode, GLsizei count, GLenum type, const GLvoid * indices, GLint basevertex){_detail::DrawElementsBaseVertex(mode, count, type, indices, basevertex);}
@@ -1697,7 +1700,7 @@ namespace gl
 	inline void TexImage2DMultisample(GLenum target, GLsizei samples, GLint internalformat, GLsizei width, GLsizei height, GLboolean fixedsamplelocations){_detail::TexImage2DMultisample(target, samples, internalformat, width, height, fixedsamplelocations);}
 	inline void TexImage3DMultisample(GLenum target, GLsizei samples, GLint internalformat, GLsizei width, GLsizei height, GLsizei depth, GLboolean fixedsamplelocations){_detail::TexImage3DMultisample(target, samples, internalformat, width, height, depth, fixedsamplelocations);}
 	inline void WaitSync(GLsync sync, GLbitfield flags, GLuint64 timeout){_detail::WaitSync(sync, flags, timeout);}
-	
+
 	inline void BindFragDataLocationIndexed(GLuint program, GLuint colorNumber, GLuint index, const GLchar * name){_detail::BindFragDataLocationIndexed(program, colorNumber, index, name);}
 	inline void BindSampler(GLuint unit, GLuint sampler){_detail::BindSampler(unit, sampler);}
 	inline void ColorP3ui(GLenum type, GLuint color){_detail::ColorP3ui(type, color);}
@@ -1756,17 +1759,17 @@ namespace gl
 	inline void VertexP3uiv(GLenum type, const GLuint * value){_detail::VertexP3uiv(type, value);}
 	inline void VertexP4ui(GLenum type, GLuint value){_detail::VertexP4ui(type, value);}
 	inline void VertexP4uiv(GLenum type, const GLuint * value){_detail::VertexP4uiv(type, value);}
-	
-	
+
+
 	namespace sys
 	{
-		
+
 		exts::LoadTest LoadFunctions();
-		
+
 		int GetMinorVersion();
 		int GetMajorVersion();
 		bool IsVersionGEQ(int majorVersion, int minorVersion);
-		
+
 	} //namespace sys
 } //namespace gl
 #endif //FUNCTION_CPP_GENERATED_HEADEROPENGL_HPP
