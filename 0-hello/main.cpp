@@ -1,4 +1,4 @@
-#include "init.h"
+#include "../init.h"
 
 #include <iostream>
 using namespace std;

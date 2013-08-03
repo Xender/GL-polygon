@@ -30,11 +30,11 @@
 	<GLFW/glfw3.h>
 	<memory>
 
-1375470888 source:/home/xender/coding/nuclear/GL-polygon/0-hello/main.cpp
-	"init.h"
+1375528619 source:/home/xender/coding/nuclear/GL-polygon/0-hello/main.cpp
+	"../init.h"
 	<iostream>
 
-1375280594 /home/xender/coding/nuclear/GL-polygon/gl_3_3_core.hpp
+1375486639 /home/xender/coding/nuclear/GL-polygon/gl_3_3_core.hpp
 	<windows.h>
 	<windows.h>
 	<stddef.h>
@@ -44,4 +44,24 @@
 	<stdint.h>
 	<stdint.h>
 	<inttypes.h>
+
+1375470881 source:/home/xender/coding/nuclear/GL-polygon/init.cpp
+	"init.h"
+	<iostream>
+
+1375528611 /home/xender/coding/nuclear/GL-polygon/init.h
+	"gl_3_3_core.hpp"
+	<GLFW/glfw3.h>
+	<memory>
+
+1375486643 source:/home/xender/coding/nuclear/GL-polygon/gl_3_3_core.cpp
+	<algorithm>
+	<vector>
+	<string.h>
+	<stddef.h>
+	"gl_3_3_core.hpp"
+	<mach-o/dyld.h>
+	<dlfcn.h>
+	<stdio.h>
+	<GL/glx.h>
 
