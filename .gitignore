@@ -1,6 +1,10 @@
 # Binaries
 */bin
 
+# Code::Blocks supplementary project files
+*.layout
+*.depend
+
 # Compiled Object files
 *.slo
 *.lo
